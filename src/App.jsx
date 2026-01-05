@@ -27,6 +27,9 @@ const CreditCardIcon = (p) => <Icon {...p} paths={<><rect width="20" height="14"
 const PartyPopperIcon = (p) => <Icon {...p} paths={<><path d="M5.8 11.3 2 22l10.7-3.8Z" /><path d="m22 2-1.5 1.5" /><path d="m15 8.5-4.5 4.5" /></>} />;
 
 const App = () => {
+  // Debug log to check if the component is actually loading
+  console.log("Pongal App Initialized");
+
   const [formData, setFormData] = useState({ name: '', rollNumber: '', emailId: '', utrId: '', quantity: 1 });
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
@@ -58,10 +61,10 @@ const App = () => {
         <div className="bg-white rounded-[3rem] shadow-brutal p-10 max-w-md w-full text-center border-4 border-black relative z-10">
           <PartyPopperIcon className="w-16 h-16 text-orange-600 mx-auto mb-6" />
           <h2 className="text-4xl font-black text-gray-900 mb-2 uppercase festive-title">SUCCESS!</h2>
-          <p className="text-lg font-bold text-gray-700 mb-8 leading-snug">Registration confirmed! Check <span className="text-blue-600 underline break-all">{formData.emailId}</span> for your QR ticket.</p>
+          <p className="text-lg font-bold text-gray-700 mb-8 leading-snug">Registration confirmed! Check <span className="text-blue-600 underline break-all font-black">{formData.emailId}</span> for your QR ticket.</p>
           <button 
             onClick={() => { setSubmitted(false); setFormData({...formData, name: '', utrId: ''}); }} 
-            className="w-full bg-orange-500 text-white font-black py-5 rounded-2xl shadow-brutal-sm active:translate-x-1 active:translate-y-1 active:shadow-none transition-all border-4 border-black uppercase tracking-widest"
+            className="w-full bg-orange-500 text-white font-black py-5 rounded-2xl shadow-brutal-sm active:translate-x-1 active:translate-y-1 active:shadow-none transition-all border-4 border-black uppercase tracking-widest text-lg"
           >
             Book More
           </button>
@@ -98,7 +101,7 @@ const App = () => {
 
         {/* Form Section */}
         <div className="md:w-[60%] p-6 sm:p-12 bg-white">
-          <h2 className="text-4xl font-black text-gray-900 uppercase italic festive-title mb-8">Register</h2>
+          <h2 className="text-4xl font-black text-gray-900 uppercase italic festive-title mb-8 tracking-tighter">Register</h2>
           <form onSubmit={handleSubmit} className="space-y-5">
              <div className="grid grid-cols-1 md:grid-cols-2 gap-5">
                 <div className="md:col-span-2 space-y-1">
@@ -107,7 +110,7 @@ const App = () => {
                   </label>
                   <input 
                     type="text" 
-                    className="w-full px-5 py-4 bg-gray-100 font-bold outline-none" 
+                    className="w-full px-5 py-4 bg-gray-100 font-bold outline-none border-4 border-black rounded-2xl" 
                     value={formData.name} 
                     onChange={e => setFormData({...formData, name: e.target.value})} 
                     required 
@@ -119,7 +122,7 @@ const App = () => {
                   </label>
                   <input 
                     type="text" 
-                    className="w-full px-5 py-4 bg-gray-100 font-bold outline-none" 
+                    className="w-full px-5 py-4 bg-gray-100 font-bold outline-none border-4 border-black rounded-2xl" 
                     value={formData.rollNumber} 
                     onChange={e => setFormData({...formData, rollNumber: e.target.value})} 
                     required 
@@ -130,7 +133,7 @@ const App = () => {
                     <TicketIcon size={14}/> Quantity
                   </label>
                   <select 
-                    className="w-full px-5 py-4 bg-gray-100 font-black cursor-pointer appearance-none outline-none" 
+                    className="w-full px-5 py-4 bg-gray-100 font-black cursor-pointer appearance-none outline-none border-4 border-black rounded-2xl" 
                     value={formData.quantity} 
                     onChange={e => setFormData({...formData, quantity: parseInt(e.target.value)})}
                   >
@@ -143,7 +146,7 @@ const App = () => {
                   </label>
                   <input 
                     type="email" 
-                    className="w-full px-5 py-4 bg-gray-100 font-bold outline-none" 
+                    className="w-full px-5 py-4 bg-gray-100 font-bold outline-none border-4 border-black rounded-2xl" 
                     value={formData.emailId} 
                     onChange={e => setFormData({...formData, emailId: e.target.value})} 
                     required 
@@ -166,7 +169,7 @@ const App = () => {
              <button 
                 type="submit" 
                 disabled={loading} 
-                className="w-full bg-orange-500 text-white font-black py-6 rounded-3xl border-4 border-black shadow-brutal active:shadow-none transition-all uppercase tracking-widest text-xl mt-4"
+                className="w-full bg-orange-500 text-white font-black py-6 rounded-3xl border-4 border-black shadow-brutal active:translate-x-1 active:translate-y-1 active:shadow-none transition-all uppercase tracking-widest text-xl mt-4"
              >
                {loading ? "PROCESSING..." : "GET MY TICKETS!"}
              </button>
