@@ -1,13 +1,13 @@
 {
   "files": {
     "main.css": "/pongal_26/static/css/main.421277b8.css",
-    "main.js": "/pongal_26/static/js/main.0286c6eb.js",
+    "main.js": "/pongal_26/static/js/main.344a34da.js",
     "index.html": "/pongal_26/index.html",
     "main.421277b8.css.map": "/pongal_26/static/css/main.421277b8.css.map",
-    "main.0286c6eb.js.map": "/pongal_26/static/js/main.0286c6eb.js.map"
+    "main.344a34da.js.map": "/pongal_26/static/js/main.344a34da.js.map"
   },
   "entrypoints": [
     "static/css/main.421277b8.css",
-    "static/js/main.0286c6eb.js"
+    "static/js/main.344a34da.js"
   ]
 }
