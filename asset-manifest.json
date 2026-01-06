@@ -1,13 +1,13 @@
 {
   "files": {
-    "main.css": "/pongal_26/static/css/main.44eae525.css",
-    "main.js": "/pongal_26/static/js/main.2c6077a0.js",
+    "main.css": "/pongal_26/static/css/main.87bd30fa.css",
+    "main.js": "/pongal_26/static/js/main.f3c0526d.js",
     "index.html": "/pongal_26/index.html",
-    "main.44eae525.css.map": "/pongal_26/static/css/main.44eae525.css.map",
-    "main.2c6077a0.js.map": "/pongal_26/static/js/main.2c6077a0.js.map"
+    "main.87bd30fa.css.map": "/pongal_26/static/css/main.87bd30fa.css.map",
+    "main.f3c0526d.js.map": "/pongal_26/static/js/main.f3c0526d.js.map"
   },
   "entrypoints": [
-    "static/css/main.44eae525.css",
-    "static/js/main.2c6077a0.js"
+    "static/css/main.87bd30fa.css",
+    "static/js/main.f3c0526d.js"
   ]
 }
